@@ -9,7 +9,7 @@ int main()
   int *CheckRange;
   
   CheckRange = DetectRange(CurrentSamples,CurrentSamplesSize);
-  
+  printf("CheckRange = %d\n",CheckRange);
   assert(*(CheckRange+4)) == 3);
   
   return 0;
