@@ -12,6 +12,31 @@ int main()
   printf("CheckRange = %d\n",CheckRange);
   assert(*(CheckRange+4)) == 3);
   
+  printf("TestCase2:\n");
+  int CurrentSamples2[] = {3,30,5,7,10,15,12,20};
+  int CurrentSamplesSize2 = sizeof(CurrentSamples2) / sizeof(CurrentSamples2[0]);
+  
+  CheckRange = DetectRange(CurrentSamples2,CurrentSamplesSize2);
+  printf("CheckRange = %d\n",CheckRange);
+  assert(*(CheckRange+3)) == 0);
+  
+  printf("TestCase3:\n");
+  int CurrentSamples3[] = {-2,-1,0,1,2,3,4,5};
+  int CurrentSamplesSize3 = sizeof(CurrentSamples3) / sizeof(CurrentSamples3[0]);
+  CheckRange = DetectRange(CurrentSamples3,CurrentSamplesSize3);
+  printf("CheckRange = %d\n",CheckRange);
+   assert(*(CheckRange+4)) == -2);
+   assert(*(CheckRange+5)) == 5);
+  assert(*(CheckRange+6)) == 8);
+  
+  printf("TestCase4:\n");
+  int CurrentSamples4[] = {-2,-1,0,1,2,3,4,5};
+  int CurrentSamplesSize4 = sizeof(CurrentSamples4) / sizeof(CurrentSamples4[0]);
+  CheckRange = DetectRange(CurrentSamples4,CurrentSamplesSize4);
+  printf("CheckRange = %d\n",CheckRange);
+  assert(*(CheckRange+3)) == 0);
+ 
+  
   return 0;
 }
   
