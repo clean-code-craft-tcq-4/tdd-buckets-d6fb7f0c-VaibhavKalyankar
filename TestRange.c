@@ -38,6 +38,8 @@ int main()
 
   //Test Case for A2D Conversion
   assert(ConvertA2DData(10,1146,12) == 3);
+  assert(ConvertA2DData(10,4095,12) == -1);
+  assert(ConvertA2DData(10,4094,12) == 10);
   
   
   return 0;
