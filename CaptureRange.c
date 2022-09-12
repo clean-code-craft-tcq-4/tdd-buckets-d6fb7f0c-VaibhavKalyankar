@@ -1,6 +1,7 @@
 #include "CaptureRange.h"
 #include <stdlib.h>
 
+static int RangeValue[20][4];
 
 int CmpSamples(const void * Value1,const void * Value2)
 {
