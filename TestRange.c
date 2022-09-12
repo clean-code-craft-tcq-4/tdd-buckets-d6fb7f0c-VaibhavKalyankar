@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "RangeCapture.h"
+#include "CaptureRange.h"
 
 int main()
 {
