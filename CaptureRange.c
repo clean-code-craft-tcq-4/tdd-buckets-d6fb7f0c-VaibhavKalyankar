@@ -4,7 +4,7 @@
 
 int CmpSamples(const void * Value1,const void * Value2)
 {
-   return (*Value1 - *Value2);
+   return (*(int *)Value1 - *(int *)Value2);
 }
 
 int CalcRange(int ContinuedCnt,int RangeCnt,int FirstSample,int LastSample)
