@@ -7,6 +7,7 @@ int main()
   int CurrentSamplesSize = sizeof(CurrentSamples) / sizeof(CurrentSamples[0]);
   
   int *CheckRange;
+  int *PrintRange;
   
   CheckRange = DetectRange(CurrentSamples,CurrentSamplesSize);
   printf("CheckRange = %d\n",CheckRange);
@@ -37,10 +38,20 @@ int main()
   assert(*(CheckRange+3)) == 0);
 
   //Test Case for A2D Conversion
-   assert(ConvertA2DData(8,258,10) == 2);
+  assert(ConvertA2DData(8,258,10) == 2);
   assert(ConvertA2DData(10,1146,12) == 3);
   assert(ConvertA2DData(10,4095,12) == -1);
   assert(ConvertA2DData(10,4094,12) == 10);
+  
+  int CurrentValueArray[] = {1146,4094};
+  
+  int CurrentValueSize = sizeof(CurrentValueArray) / sizeof(CurrentValueArray[0]);
+  
+  ConvertA2DToAmpere(CurrentValueArray,CurrentValueSize,10,12);
+  PrintRange = DetectRange(CurrentValueArray,CurrentValueSize);
+  assert(*(PrintRange+3) == 0);
+  
+  
  
   
   
