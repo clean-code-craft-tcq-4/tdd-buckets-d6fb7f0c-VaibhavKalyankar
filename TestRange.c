@@ -56,7 +56,7 @@ int main()
   assert(*(PrintRange+3) == 0);
 
   
- 
+ /*
   int CurrentValueArray1[] = {1146,1600,4094};
   int CurrentValueSize1 = sizeof(CurrentValueArray1) / sizeof(CurrentValueArray1[0]);
   ConvertA2DToAmpere(CurrentValueArray1,CurrentValueSize1,10,12);
@@ -64,7 +64,7 @@ int main()
   assert(*(PrintRange+4) == 3);
   assert(*(PrintRange+5) == 4);
 
- /* 
+  
   int CurrentValueArray2[] = {-1000,-1146,-4094};
   int CurrentValueSize2 = sizeof(CurrentValueArray2) / sizeof(CurrentValueArray2[0]);
   ConvertA2DToAmpere(CurrentValueArray2,CurrentValueSize2,10,12);
