@@ -21,6 +21,17 @@ int CalcRange(int ContinuedCnt,int RangeCnt,int FirstSample,int LastSample)
   }
  return RangeCnt;
 }
+
+int IsConsecutive(int Difference)
+{
+   int consecutive = 0;
+   if((Difference == 0) || (Difference == 1))
+      consecutive = 1;
+   
+   return consecutive;
+}
+      
+   
       
 int * DetectRange(int CurrentSamples[],int CurrentSamplesSize)
 {
@@ -37,12 +48,14 @@ int * DetectRange(int CurrentSamples[],int CurrentSamplesSize)
   for(Index=0;Index<CurrentSamplesSize;Index++)
   {
      SampleDiff = CurrentSamples[Index+1] - CurrentSamples[Index];
-     
+   /*  
     if((SampleDiff == 0) || (SampleDiff == 1))
     {
        Consecutive = 1;
     }
-    if(Consecutive == 1)
+    */
+     
+    if(IsConsecutive(SampleDiff) == 1)
     {
        ContinuedCnt++;
        LastSample = CurrentSamples[Index + 1];
