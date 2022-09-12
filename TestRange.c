@@ -40,7 +40,7 @@ int main()
   CheckRange = DetectRange(CurrentSamples4,CurrentSamplesSize4);
   printf("CheckRange = %d\n",CheckRange);
   assert(*(CheckRange+3) == 0);
-
+/*
   //Test Case for A2D Conversion
   assert(ConvertA2DData(8,258,10) == 2);
   assert(ConvertA2DData(10,1146,12) == 3);
@@ -67,7 +67,7 @@ int main()
   PrintRange = DetectRange(CurrentValueArray2,CurrentValueSize1);
   assert(*(PrintRange+4) == 2);
   assert(*(PrintRange+5) == 3);
-  
+  */
   return 0;
 }
   
