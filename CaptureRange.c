@@ -1,5 +1,5 @@
 #include "CaptureRange.h"
-#inlcude <stdlib.h>
+#include <stdlib.h>
 
 
 int CmpSamples(const void * Value1,const void * Value2)
