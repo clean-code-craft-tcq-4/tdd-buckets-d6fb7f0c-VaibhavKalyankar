@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "CaptureRange.h"
+#include "A2DConversion.h"
 
 int main()
 {
@@ -52,13 +53,13 @@ int main()
   assert(*(PrintRange+3) == 0);
   
   int CurrentValueArray1[] = {4095};
-  int CurrentValueSize1 = sizeof(CurrentValueArray1) / siseof(CurrentValueArray1[0]);
+  int CurrentValueSize1 = sizeof(CurrentValueArray1) / sizeof(CurrentValueArray1[0]);
   ConvertA2DToAmpere(CurrentValueArray,CurrentValueSize,10,12);
   PrintRange = DetectRange(CurrentValueArray1,CurrentValueSize1);
   assert(*(PrintRange+3) == 0);
 
   int CurrentValueArray2[] = {-1000,-4094};
-  int CurrentValueSize2 = sizeof(CurrentValueArray2) / siseof(CurrentValueArray2[0]);
+  int CurrentValueSize2 = sizeof(CurrentValueArray2) / sizeof(CurrentValueArray2[0]);
   ConvertA2DToAmpere(CurrentValueArray2,CurrentValueSize2,10,12);
   PrintRange = DetectRange(CurrentValueArray2,CurrentValueSize1);
   assert(*(PrintRange+4) == 2);
