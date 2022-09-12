@@ -13,7 +13,7 @@ int main()
  
   CheckRange = DetectRange(CurrentSamples,CurrentSamplesSize);
   printf("CheckRange = %d\n",CheckRange);
-  assert(*(CheckRange+3) == 3);
+  assert(*(CheckRange+4) == 3);
   
   
   /*
