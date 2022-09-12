@@ -19,8 +19,6 @@ int ConvertA2DData(int MaxAmp,int A2DValue,int BitResolution)
 
 void ConvertA2DToAmpere(int CurrentValueArray[],int ArraySize,int MaxAmp,int BitResolution,int *AmpereArray)
 {
-  
-  
   int Count = 0;
   for(int Index=0;Index < ArraySize;Index++)
   {
