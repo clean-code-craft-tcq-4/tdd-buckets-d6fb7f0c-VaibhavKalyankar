@@ -47,14 +47,15 @@ int main()
   assert(ConvertA2DData(10,4095,12) == -1);
   assert(ConvertA2DData(10,4094,12) == 10);
  
+ 
   int CurrentValueArray[] = {1146,4094};
   int CurrentValueSize = sizeof(CurrentValueArray) / sizeof(CurrentValueArray[0]);
-  ConvertA2DToAmpere(CurrentValueArray,CurrentValueSize,10,12);
+  int AmpereArray = {};
+  ConvertA2DToAmpere(CurrentValueArray,CurrentValueSize,10,12,AmpereArray);
   PrintRange = DetectRange(CurrentValueArray,CurrentValueSize);
   assert(*(PrintRange+3) == 0);
 
-  
- /*
+  /*
   int CurrentValueArray1[] = {1146,1600,4094};
   int CurrentValueSize1 = sizeof(CurrentValueArray1) / sizeof(CurrentValueArray1[0]);
   ConvertA2DToAmpere(CurrentValueArray1,CurrentValueSize1,10,12);
