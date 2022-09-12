@@ -47,14 +47,7 @@ int * DetectRange(int CurrentSamples[],int CurrentSamplesSize)
   
   for(Index=0;Index<CurrentSamplesSize;Index++)
   {
-     SampleDiff = CurrentSamples[Index+1] - CurrentSamples[Index];
-   /*  
-    if((SampleDiff == 0) || (SampleDiff == 1))
-    {
-       Consecutive = 1;
-    }
-    */
-     
+     SampleDiff = CurrentSamples[Index+1] - CurrentSamples[Index];     
     if(IsConsecutive(SampleDiff) == 1)
     {
        ContinuedCnt++;
