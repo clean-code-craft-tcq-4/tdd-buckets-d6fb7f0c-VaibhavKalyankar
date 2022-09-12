@@ -50,7 +50,7 @@ int main()
  
   int CurrentValueArray[] = {1146,4094};
   int CurrentValueSize = sizeof(CurrentValueArray) / sizeof(CurrentValueArray[0]);
-  int AmpereArray = {};
+  int AmpereArray[] = {};
   ConvertA2DToAmpere(CurrentValueArray,CurrentValueSize,10,12,AmpereArray);
   PrintRange = DetectRange(CurrentValueArray,CurrentValueSize);
   assert(*(PrintRange+3) == 0);
