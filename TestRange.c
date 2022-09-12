@@ -4,15 +4,16 @@
 
 int main()
 {
-  int CurrentSamples[] = {3,3,5,4,10,11,12};
-  int CurrentSamplesSize = sizeof(CurrentSamples) / sizeof(CurrentSamples[0]);
   
   int *CheckRange;
   int *PrintRange;
   
+  int CurrentSamples[] = {3,3,5,4,10,11,12};
+  int CurrentSamplesSize = sizeof(CurrentSamples) / sizeof(CurrentSamples[0]);
+ 
   CheckRange = DetectRange(CurrentSamples,CurrentSamplesSize);
   printf("CheckRange = %d\n",CheckRange);
-  assert(*(CheckRange+4) == 3);
+  assert(*(CheckRange+3) == 3);
   
   printf("TestCase2:\n");
   int CurrentSamples2[] = {3,30,5,7,10,15,12,20};
