@@ -16,7 +16,7 @@ int main()
   assert(*(CheckRange+3) == 3);
   
   
-  
+  /*
   printf("TestCase2:\n");
   int CurrentSamples2[] = {3,30,5,7,10,15,12,20};
   int CurrentSamplesSize2 = sizeof(CurrentSamples2) / sizeof(CurrentSamples2[0]);
@@ -67,7 +67,7 @@ int main()
   PrintRange = DetectRange(CurrentValueArray2,CurrentValueSize1);
   assert(*(PrintRange+4) == 2);
   assert(*(PrintRange+5) == 3);
-  
+  */
   return 0;
 }
   
